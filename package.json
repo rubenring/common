@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config _infrastruktur/webpack.config.development.js",
-    "build": "webpack --config _infrastruktur/webpack.config.js"
+    "start": "webpack-dev-server --config _infrastruktur/webpack.dev.config.js",
+    "build": "rimraf dist && webpack --config _infrastruktur/webpack.config.js --display-error-details",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
@@ -34,9 +35,11 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
+    "@hot-loader/react-dom": "^16.8.6",
+    "@storybook/react": "^5.0.6",
+    "array.prototype.flat": "^1.2.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.1",
     "es6-promise": "^4.2.6",
     "es6-symbol": "^3.1.1",
     "eslint": "^5.16.0",
@@ -53,15 +56,20 @@
     "mini-css-extract-plugin": "^0.5.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prop-types": "^15.7.2",
+    "css-loader": "^2.1.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-merge": "^4.2.1",
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

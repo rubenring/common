@@ -1,0 +1,17 @@
+.hovedknapp {
+    border: 2px solid #047fa4;
+    background-color: #fff;
+    padding: 10px 25px;
+    cursor: pointer;
+
+    .hovedknapp-tekst {
+        font-size: 18px;    
+    }
+}
+.hovedknapp-disabled {
+    background-color: '#dedede';
+    cursor: 'not-allowed';
+    box-shadow: 'none';
+    border: 2px solid #c7c7c7; 
+    color: #01303d;
+}
